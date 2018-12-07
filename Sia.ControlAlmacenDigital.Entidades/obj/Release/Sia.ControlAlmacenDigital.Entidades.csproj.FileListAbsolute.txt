@@ -1,0 +1,6 @@
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\bin\Release\Sia.ControlAlmacenDigital.Entidades.dll
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\bin\Release\Sia.ControlAlmacenDigital.Entidades.pdb
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Release\Sia.ControlAlmacenDigital.Entidades.csprojAssemblyReference.cache
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Release\Sia.ControlAlmacenDigital.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Release\Sia.ControlAlmacenDigital.Entidades.dll
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Release\Sia.ControlAlmacenDigital.Entidades.pdb

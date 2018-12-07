@@ -1,0 +1,58 @@
+﻿<div class="modal fade" id="editarProductoModal" tabindex="-1" role="dialog" aria-labelledby="editarProductoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarProductoModalLabel">Actualizar producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="formEditarProducto" name="formEditarProducto">
+                <div class="modal-body">
+                    <input type="hidden" class="form-control" id="ProductoIdEditar" name="ProductoIdEditar" disabled>
+                    <div class="form-group">
+                        <label for="CategoriaEditar" class="col-form-label">Categoría:</label>
+                        <select class="form-control" id="CategoriaEditar" name="CategoriaEditar"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="CodigoEditar" class="col-form-label">Código:</label>
+                        <input type="text" class="form-control" id="CodigoEditar" name="CodigoEditar">
+                    </div>
+                    <div class="form-group">
+                        <label for="CodigoBarraEditar" class="col-form-label">Código de barra:</label>
+                        <input type="text" class="form-control" id="CodigoBarraEditar" name="CodigoBarraEditar">
+                    </div>
+                    <div class="form-group">
+                        <label for="NombreEditar" class="col-form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="NombreEditar" name="NombreEditar">
+                    </div>
+                    <div class="form-group">
+                        <label for="PiezaEditar" class="col-form-label">Pieza:</label>
+                        <input type="number" class="form-control" id="PiezaEditar" name="PiezaEditar">
+                    </div>
+                    <div class="form-group">
+                        <label for="CapacidadEditar" class="col-form-label">Capacidad:</label>
+                        <input type="text" class="form-control" id="CapacidadEditar" name="CapacidadEditar">
+                    </div>
+                    <div class="form-group">
+                        <label for="ColorEditar" class="col-form-label">Color:</label>
+                        <input type="text" class="form-control" id="ColorEditar" name="ColorEditar">
+                    </div>
+                    <div class="form-group">
+                        <label for="MaterialEditar" class="col-form-label">Material:</label>
+                        <input type="text" class="form-control" id="MaterialEditar" name="MaterialEditar">
+                    </div>
+                    <div class="form-group">
+                        <label for="DescripcionEditar" class="col-form-label">Descripción:</label>
+                        <textarea type="text" class="form-control" id="DescripcionEditar" name="DescripcionEditar"></textarea>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-w-m btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-w-m btn-primary ladda-button" data-style="zoom-in" id="btnActualizar">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

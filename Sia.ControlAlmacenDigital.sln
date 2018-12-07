@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sia.ControlAlmacenDigital.WebApi", "Sia.ControlAlmacenDigital.WebApi\Sia.ControlAlmacenDigital.WebApi.csproj", "{CB068677-1680-48E1-8955-0574D6D2346E}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Sia.ControlAlmacenDigital.BaseDatos", "Sia.ControlAlmacenDigital.BaseDatos\Sia.ControlAlmacenDigital.BaseDatos.sqlproj", "{6F90EA51-0654-47E0-960E-4321CB18F19B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sia.AlmacenDigital.WebMvc", "Sia.AlmacenDigital.WebMvc\Sia.AlmacenDigital.WebMvc.csproj", "{1598F450-1AE3-4261-B013-B8B1D66C1A4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sia.ControlAlmacenDigital.Entidades", "Sia.ControlAlmacenDigital.Entidades\Sia.ControlAlmacenDigital.Entidades.csproj", "{5D8AF8B3-B20B-407D-A8D5-33E39289D47A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB068677-1680-48E1-8955-0574D6D2346E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB068677-1680-48E1-8955-0574D6D2346E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB068677-1680-48E1-8955-0574D6D2346E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB068677-1680-48E1-8955-0574D6D2346E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F90EA51-0654-47E0-960E-4321CB18F19B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F90EA51-0654-47E0-960E-4321CB18F19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F90EA51-0654-47E0-960E-4321CB18F19B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6F90EA51-0654-47E0-960E-4321CB18F19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F90EA51-0654-47E0-960E-4321CB18F19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F90EA51-0654-47E0-960E-4321CB18F19B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1598F450-1AE3-4261-B013-B8B1D66C1A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1598F450-1AE3-4261-B013-B8B1D66C1A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1598F450-1AE3-4261-B013-B8B1D66C1A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1598F450-1AE3-4261-B013-B8B1D66C1A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D8AF8B3-B20B-407D-A8D5-33E39289D47A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D8AF8B3-B20B-407D-A8D5-33E39289D47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D8AF8B3-B20B-407D-A8D5-33E39289D47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D8AF8B3-B20B-407D-A8D5-33E39289D47A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4096723D-4C37-4B33-A323-476507296AF2}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://hectormlopezh.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Sia.ControlAlmacenDigital.WebApi\\Sia.ControlAlmacenDigital.WebApi.csproj
+		SccProjectName1 = Sia.ControlAlmacenDigital.WebApi
+		SccLocalPath1 = Sia.ControlAlmacenDigital.WebApi
+		SccProjectUniqueName2 = Sia.ControlAlmacenDigital.BaseDatos\\Sia.ControlAlmacenDigital.BaseDatos.sqlproj
+		SccProjectName2 = Sia.ControlAlmacenDigital.BaseDatos
+		SccLocalPath2 = Sia.ControlAlmacenDigital.BaseDatos
+		SccProjectUniqueName3 = Sia.AlmacenDigital.WebMvc\\Sia.AlmacenDigital.WebMvc.csproj
+		SccProjectName3 = Sia.AlmacenDigital.WebMvc
+		SccLocalPath3 = Sia.AlmacenDigital.WebMvc
+		SccProjectUniqueName4 = Sia.ControlAlmacenDigital.Entidades\\Sia.ControlAlmacenDigital.Entidades.csproj
+		SccProjectName4 = Sia.ControlAlmacenDigital.Entidades
+		SccLocalPath4 = Sia.ControlAlmacenDigital.Entidades
+	EndGlobalSection
+EndGlobal

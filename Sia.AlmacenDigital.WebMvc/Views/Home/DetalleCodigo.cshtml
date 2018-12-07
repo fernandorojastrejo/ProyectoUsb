@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+    ViewBag.Title = "Detalle Código";
+}
+@section Styles {
+    @Styles.Render("~/Content/plugins/dataTables/dataTablesStyles")
+}
+<div class="row">
+    <ul class="bxslider-catalogo"></ul>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="container">
+        <!-- Detalle producto -->
+        @Html.Partial("Partial/_MensajePrecios")
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Detalle Código Producto <strong>@ViewBag.CodigoProducto</strong></h5>
+                    </div>
+                    <input type="hidden" name="CodigoProducto" id="CodigoProducto" value="@ViewBag.CodigoProducto" />
+                    @Html.Partial("Partial/_DetalleCodigo")
+                </div>
+            </div>
+        </div>
+        <!-- Fin detalle producto-->
+
+
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/plugins/dataTables")
+    <script type="text/javascript" src="~/Scripts/mvc/carrito/index.js"></script>
+    <script type="text/javascript" src="~/Scripts/mvc/carrito/detallecodigo.js"></script>
+}

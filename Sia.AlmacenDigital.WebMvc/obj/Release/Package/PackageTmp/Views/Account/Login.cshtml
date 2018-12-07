@@ -1,0 +1,94 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Technology | Inicio de sesión</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/Content/animate.css" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet">
+    @Styles.Render("~/plugins/laddaStyles")
+
+</head>
+
+<body class="gray-bg">
+    <input type="hidden" id="WebApiUrlHdn" value="@System.Configuration.ConfigurationManager.AppSettings["WebApiUrl"]" />
+    <input type="hidden" id="WebMvcUrlHdn" value="@System.Configuration.ConfigurationManager.AppSettings["WebMvcUrl"]" />
+    <div class="middle-box text-center animated fadeInDown">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <img src="~/Images/logo.jpg" width="350" height="200" alt="Technology" class="img-responsive center-block" />
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="ibox-content">
+                    <h3>Bienvenido Technology</h3>
+                    <p>Inicio de sesión</p>
+                    <input type="hidden" value="@ViewBag.ReturnUrl" id="returnUrlController" />
+                    @using (Html.BeginForm(null, null, null, FormMethod.Post, new { @class = "m-t", role = "form", id = "loginForm" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <hr />
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="Email" id="Email" placeholder="Correo electrónico" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" name="Password" id="Password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" />
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-danger alert-dismissable" id="errorTextForm" style="display:none;">
+                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                <span class="mensaje"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="ladda-button btn btn-primary block full-width m-b" data-style="zoom-in" id="btnLogin">
+                                <span class="ladda-label">Entrar</span>
+                                <span class="ladda-spinner"></span>
+                            </button>
+                        </div>
+                    }
+                    <p class="text-muted text-center"><small>¿Usuario nuevo?</small></p>
+                    <a class="btn btn-sm btn-white btn-block" href="@Url.Action("Register", "Account")">Registrarse</a>
+                    @*<p class="m-t"> <small>Almacen Digital &copy; 2018</small> </p>*@
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div>
+            @*<div>
+                    <h1 class="logo-name">AD+</h1>
+                </div>*@
+
+
+        </div>
+    </div>
+</body>
+</html>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/plugins/validate")
+@Scripts.Render("~/plugins/ladda")
+
+<script src="~/Scripts/parametros.js"></script>
+<script src="~/Scripts/api/WebApi.js"></script>
+<script src="~/Scripts/login/login.js"></script>
+

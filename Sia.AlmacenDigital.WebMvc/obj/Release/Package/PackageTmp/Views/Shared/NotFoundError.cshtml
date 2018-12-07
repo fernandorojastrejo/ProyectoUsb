@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 Error</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/Content/animate.css" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <input type="hidden" id="WebMvcUrlHdn" value="@System.Configuration.ConfigurationManager.AppSettings["WebMvcUrl"]" />
+    <div class="middle-box text-center animated fadeInDown">
+        <h1>404</h1>
+        <h3 class="font-bold">Pagina no encontrada</h3>
+
+        <div class="error-desc">
+            Lo sentimos, pero la página que estás buscando no ha sido encontrada. Intente verificar la URL para ver si hay errores, luego presione el botón de actualización en su navegador o intente encontrar algo más en nuestra aplicación.
+            <p><strong>Presione INICIO si no es redireccionado automáticamente</strong></p>
+            <br />
+            <a href="@Url.Action("Index","Home")" class="btn btn-sm btn-rounded btn-primary" title="Regresar"><i class="fa fa-home"></i> Inicio</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+@Scripts.Render("~/bundles/jquery")
+<script src="~/Scripts/parametros.js"></script>
+<script>
+    console.log(mvcUrl)
+    setTimeout(function () { window.location.href = mvcUrl; }, 3000);
+</script>

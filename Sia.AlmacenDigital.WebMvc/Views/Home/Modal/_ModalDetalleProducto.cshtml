@@ -1,0 +1,139 @@
+﻿<div class="modal fade" id="detalleProductoModal" tabindex="-1" role="dialog" aria-labelledby="detalleProductoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="detalleProductoModalLabel">Detalle del producto</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="ibox iboxDetalleProducto">
+                    <div class="ibox-content">
+                        <div class="sk-spinner sk-spinner-circle">
+                            <div class="sk-circle1 sk-circle"></div>
+                            <div class="sk-circle2 sk-circle"></div>
+                            <div class="sk-circle3 sk-circle"></div>
+                            <div class="sk-circle4 sk-circle"></div>
+                            <div class="sk-circle5 sk-circle"></div>
+                            <div class="sk-circle6 sk-circle"></div>
+                            <div class="sk-circle7 sk-circle"></div>
+                            <div class="sk-circle8 sk-circle"></div>
+                            <div class="sk-circle9 sk-circle"></div>
+                            <div class="sk-circle10 sk-circle"></div>
+                            <div class="sk-circle11 sk-circle"></div>
+                            <div class="sk-circle12 sk-circle"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5" id="carrouselImagenes">
+                                <div class="carousel slide" id="carousel">
+                                    <div class="carousel-inner cargar-imagen">
+                                        @*<div class="item active">
+                                            <img alt="image" class="img-responsive" src="~/Images/productos/dd_samsung.png">
+                                            <div class="carousel-caption">
+                                                <p>This is simple caption 1</p>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img alt="image" class="img-responsive" src="~/Images/productos/pantalla_lg.png">
+                                            <div class="carousel-caption">
+                                                <p>This is simple caption 2</p>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img alt="image" class="img-responsive" src="~/Images/productos/usb.png">
+                                            <div class="carousel-caption">
+                                                <p>This is simple caption 3</p>
+                                            </div>
+                                        </div>*@
+                                    </div>
+                                    <a data-slide="prev" href="#carousel" class="left carousel-control">
+                                        <span class="icon-prev"></span>
+                                    </a>
+                                    <a data-slide="next" href="#carousel" class="right carousel-control">
+                                        <span class="icon-next"></span>
+                                    </a>
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-7">
+                                <h2 class="font-bold m-b-xs modal-nombre-producto">
+                                    Cargando...
+                                </h2>
+                                <small class="modal-codigo-producto">0000</small>
+                                <hr>
+                                <div>
+                                    <button class="btn btn-primary">Agregar al carrito</button>
+                                    <h1 class="product-main-price">$350.00 <small class="text-muted">MN mx</small> </h1>
+                                </div>
+                                <hr>
+
+                                <h4>Descripción del producto</h4>
+                                <div class="small text-muted modal-descripcion-producto">
+                                    Descripción....
+                                </div>
+                                <hr>                           
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col md-12">
+                                <h4>Ficha técnica del producto</h4>
+                                @*<dl class="m-t-md">
+                                    <dt>Color del producto</dt>
+                                    <dd class="modal-color-producto">cargando...</dd>
+
+                                    <dt>Material del producto</dt>
+                                    <dd class="modal-material-producto">cargando...</dd>
+
+                                    <dt>Capacidad del producto</dt>
+                                    <dd class="modal-capacidad-producto">Cargando...</dd>
+
+                                    <dt>Existencia del producto</dt>
+                                    <dd class="modal-existencia-producto">Cargando...</dd>
+
+                                    <dt>Reservado del producto</dt>
+                                    <dd class="modal-reservado-producto">Cargando...</dd>
+                                </dl>*@
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Existencia</th>
+                                            <th>Reservado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="modal-existencia-producto">N/A</td>
+                                            <td class="modal-reservado-producto">N/A</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Color</th>
+                                            <th>Material</th>
+                                            <th>Capacidad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="modal-color-producto">N/A</td>
+                                            <td class="modal-material-producto">N/A</td>
+                                            <td class="modal-capacidad-producto">N/A</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+    ViewBag.Title = "Catálogo";
+}
+@section Styles {
+}
+<div class="row">
+    <ul class="bxslider-catalogo"></ul>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="container">
+        <!-- Catalogo Catálogo-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Catálogo</h5>
+                    </div>
+                    <!-- Grid productos-->
+                    @Html.Partial("Partial/_GridProducto")
+                </div>
+            </div>
+        </div>
+        <!-- Fin catalogos productos-->
+        <!-- Modal detalle producto-->
+        @Html.Partial("Modal/_ModalDetalleProducto")
+
+
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            cargaBanner("catalogo", 0);
+            obtenerProductosCategoria(0, 1);
+            dibujarPaginador(0);
+            var url = window.location.href;
+            if (url.includes('#')) {
+                var pageNumber = window.location.hash.substr(1);
+                $('.pagination').pagination('selectPage', pageNumber);
+            }
+        });
+    </script>
+    <script type="text/javascript" src="~/Scripts/mvc/carrito/index.js"></script>
+}

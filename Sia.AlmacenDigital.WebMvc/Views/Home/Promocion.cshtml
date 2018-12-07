@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+    ViewBag.Title = "Promociones";
+}
+@section Styles {
+}
+<div class="row">
+    <ul class="bxslider-promocion"></ul>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="container">
+        @Html.Partial("Partial/_MensajePrecios")
+        @Html.Partial("Partial/_BuscarProducto")
+        <!-- Catalogo promociones-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Productos en promoción</h5>
+                        @Html.Partial("Partial/_CategoriaID")
+                    </div>
+                    <!-- Grid productos-->
+                    @Html.Partial("Partial/_GridProducto")
+                </div>
+            </div>
+        </div>
+        <!-- Fin catalogos productos-->
+        <!-- Modal detalle producto-->
+        @Html.Partial("Modal/_ModalDetalleProducto")
+
+
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            cargaBanner("promocion", 7);
+            obtenerProductosCategoria(7, 1);
+            dibujarPaginador(7);
+            var url = window.location.href;
+            if (url.includes('#')) {
+                var pageNumber = window.location.hash.substr(1);
+                $('.pagination').pagination('selectPage', pageNumber);
+            }
+            //clickBtnBuscar(7, 1);
+        });
+    </script>
+    <script type="text/javascript" src="~/Scripts/mvc/carrito/index.js"></script>
+
+}

@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Usuarios registrados";
+}
+<input type="hidden" id="WebApiUrlHdn" value="@System.Configuration.ConfigurationManager.AppSettings["WebApiUrl"]" />
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Usuarios registrados</h2>
+        <ol class="breadcrumb">
+            <li>Administración del sistema</li>
+            <li class="active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins" id="ibox1">
+                <div class="ibox-title">
+                    <h5>Usuarios registrados</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="sk-spinner sk-spinner-cube-grid">
+                        <div class="sk-cube"></div>
+                        <div class="sk-cube"></div>
+                        <div class="sk-cube"></div>
+                        <div class="sk-cube"></div>
+                        <div class="sk-cube"></div>
+                        <div class="sk-cube"></div>
+                        <div class="sk-cube"></div>
+                        <div class="sk-cube"></div>
+                        <div class="sk-cube"></div>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="tblUsuarios" class="table table-stripped" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Correo electrónico</th>
+                                    <th>Tipo precio</th>
+                                    <th>Estatus</th>
+                                    <th>Rol(es)</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles {
+    @Styles.Render("~/plugins/sweetAlertStyles")
+    @Styles.Render("~/Content/plugins/dataTables/dataTablesStyles") 
+}
+
+@section Scripts {
+    @Scripts.Render("~/plugins/codeEditor")
+    @Scripts.Render("~/plugins/dataTables")
+    @Scripts.Render("~/plugins/sweetAlert")
+    <script src="~/Scripts/mvc/admin/usuario/lista.js"></script>
+}

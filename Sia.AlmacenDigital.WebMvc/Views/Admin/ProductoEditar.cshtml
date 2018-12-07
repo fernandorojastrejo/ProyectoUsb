@@ -1,0 +1,153 @@
+﻿
+
+@{
+    ViewBag.Title = "Editar producto";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Productos</h2>
+        <ol class="breadcrumb">
+            <li>Administración del sistema</li>
+            <li>Producto</li>
+            <li class="active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="javascript:history.back()" class="btn btn-sm btn-rounded btn-primary" title="Regresar"><i class="fa fa-arrow-left"></i> Regresar</a>
+                    <br /><br />
+                    <input type="hidden" value="@ViewBag.Productoid" id="ProductoIdEditar" name="ProductoIdEditar" disabled/>
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-1">Datos del producto</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-2">Existencia del producto</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <form id="formEditarProducto" name="formEditarProducto">
+                                        <div class="modal-body">
+                                            @*<input type="hidden" class="form-control" id="ProductoIdEditar" name="ProductoIdEditar" disabled>*@
+                                            <div class="form-group">
+                                                <label for="CategoriaEditar" class="col-form-label">Categoría:</label>
+                                                <select class="form-control mayusculas" id="CategoriaEditar" name="CategoriaEditar"></select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="CodigoEditar" class="col-form-label">Código:</label>
+                                                <input type="text" class="form-control mayusculas" id="CodigoEditar" name="CodigoEditar" placeholder="Código...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="CodigoBarraEditar" class="col-form-label">Código de barra:</label>
+                                                <input type="text" class="form-control mayusculas" id="CodigoBarraEditar" name="CodigoBarraEditar" placeholder="Código de barra...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="NombreEditar" class="col-form-label">Nombre:</label>
+                                                <input type="text" class="form-control mayusculas" id="NombreEditar" name="NombreEditar" placeholder="Nombre...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="PiezaEditar" class="col-form-label">Pieza:</label>
+                                                <input type="number" class="form-control mayusculas" id="PiezaEditar" name="PiezaEditar" placeholder="Pieza...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="CapacidadEditar" class="col-form-label">Capacidad:</label>
+                                                <input type="text" class="form-control mayusculas" id="CapacidadEditar" name="CapacidadEditar" placeholder="Capacidad...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ColorEditar" class="col-form-label">Color:</label>
+                                                <input type="text" class="form-control mayusculas" id="ColorEditar" name="ColorEditar" placeholder="Color...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="MaterialEditar" class="col-form-label">Material:</label>
+                                                <input type="text" class="form-control mayusculas" id="MaterialEditar" name="MaterialEditar" placeholder="Material...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="DescripcionEditar" class="col-form-label">Descripción:</label>
+                                                <textarea type="text" class="form-control mayusculas" id="DescripcionEditar" name="DescripcionEditar" placeholder="Descripción..."></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="MedidaEditar" class="col-form-label">Medida:</label>
+                                                <input type="text" class="form-control mayusculas" id="MedidaEditar" name="MedidaEditar" placeholder="Medidas...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="EsPrincipalEditar" class="col-form-label">Nivel de producto:</label>
+                                                <select class="form-control" id="EsPrincipalEditar">
+                                                    <option value="1">PRINCIPAL</option>
+                                                    <option value="0">SECUNDARIO</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="CodigoPrincipalEditar" class="col-form-label">Código principal:</label>
+                                                <input type="text" class="form-control mayusculas" id="CodigoPrincipalEditar" name="CodigoPrincipalEditar" placeholder="Código principal...">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="text-right">
+                                                    <button type="submit" class="btn btn-w-m btn-primary ladda-button" data-style="zoom-in" id="btnActualizar">Actualizar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+                                    <form id="formEditarProductoExistencia" name="formEditarProductoExistencia">
+                                        <div class="modal-body">
+                                            <input type="hidden" class="form-control" id="ProductoExistenciaIdEditar" name="ProductoExistenciaIdEditar" disabled>
+                                            <div class="form-group">
+                                                <label for="MinimoEditar" class="col-form-label">Mínimo:</label>
+                                                <input type="number" class="form-control" id="MinimoEditar" name="MinimoEditar" placeholder="Mínimo de producto...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="MaximoEditar" class="col-form-label">Máximo:</label>
+                                                <input type="text" class="form-control" id="MaximoEditar" name="MaximoEditar" placeholder="Máximo de producto...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="FechaArriboEditar" class="col-form-label">Fecha de arribo:</label>
+                                                <input type="date" class="form-control" id="FechaArriboEditar" name="FechaArriboEditar" placeholder="Fecha de arribo...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ReservadoEditar" class="col-form-label">Producto reservado:</label>
+                                                <input type="number" class="form-control" id="ReservadoEditar" name="ReservadoEditar" placeholder="Producto reservado...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ExistenteEditar" class="col-form-label">Producto existente:</label>
+                                                <input type="number" class="form-control" id="ExistenteEditar" name="ExistenteEditar" placeholder="Producto existente...">
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="text-right">
+                                                    <button type="submit" class="btn btn-w-m btn-primary ladda-button" data-style="zoom-in" id="btnActualizarExistencia">Actualizar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+@section Styles {
+
+}
+
+@section Scripts {
+    <script src="~/Scripts/mvc/admin/producto/productoEditar.js"></script>
+}

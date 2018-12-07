@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+    ViewBag.Title = "Tecnología";
+}
+@section Styles {
+}
+<div class="row">
+    <ul class="bxslider-tecnologia"></ul>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="container">
+        @Html.Partial("Partial/_MensajePrecios")
+        @Html.Partial("Partial/_BuscarProducto")
+        <!-- Catalogo Tecnologia-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Tecnología</h5>
+                        @Html.Partial("Partial/_CategoriaID")
+                    </div>
+                    <!-- Grid productos-->
+                    @Html.Partial("Partial/_GridProducto")
+                </div>
+            </div>
+        </div>
+        <!-- Fin catalogos productos-->
+        <!-- Modal detalle producto-->
+        @Html.Partial("Modal/_ModalDetalleProducto")
+
+
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            cargaBanner("tecnologia", 4);
+            obtenerProductosCategoria(4, 1);
+            dibujarPaginador(4);
+            var url = window.location.href;
+            if (url.includes('#')) {
+                var pageNumber = window.location.hash.substr(1);
+                $('.pagination').pagination('selectPage', pageNumber);
+            }
+            //clickBtnBuscar(4, 1);
+        });
+    </script>
+    <script type="text/javascript" src="~/Scripts/mvc/carrito/index.js"></script>
+}

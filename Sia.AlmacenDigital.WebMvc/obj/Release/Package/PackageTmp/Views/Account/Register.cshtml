@@ -1,0 +1,92 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Technology | Registro</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/Content/animate.css" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet">
+    @Styles.Render("~/plugins/laddaStyles")
+    @Styles.Render("~/plugins/sweetAlertStyles")
+</head>
+
+<body class="gray-bg">
+    <input type="hidden" id="WebApiUrlHdn" value="@System.Configuration.ConfigurationManager.AppSettings["WebApiUrl"]" />
+    <input type="hidden" id="WebMvcUrlHdn" value="@System.Configuration.ConfigurationManager.AppSettings["WebMvcUrl"]" />
+    <div class="middle-box text-center loginscreen   animated fadeInDown">
+        <div>
+            <div>
+
+                <img src="~/Images/logo.jpg" width="350" height="200" alt="Technology" class="img-responsive center-block" />
+
+
+            </div>
+            <h3>Registro Technology</h3>
+            <p>Crea una cuenta con los datos solicitados</p>
+            @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "m-t", role = "form", id = "registerForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nombre (s)" name="Nombres" id="Nombres">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Apellido Paterno" name="ApellidoPaterno" id="ApellidoPaterno">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Apellido Materno" name="ApellidoMaterno" id="ApellidoMaterno">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Correo eléctronico" name="Email" id="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" name="Password" id="Password">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Confirmar password" name="ConfirmPassword" id="ConfirmPassword">
+                </div>
+                <div class="form-group">
+                    <div class="alert alert-danger alert-dismissable" id="errorTextForm" style="display:none;">
+                        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                        <span class="mensaje"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="ladda-button btn btn-primary block full-width m-b" data-style="zoom-in" id="btnRegistrar">
+                        <span class="ladda-label">Registrar</span>
+                        <span class="ladda-spinner"></span>
+                    </button>
+                </div>
+                @*<div class="form-group">
+                <button type="submit" class="ladda-button btn btn-primary block full-width m-b" data-style="zoom-in" id="btInicio" >
+                    <span class="ladda-label" >Inicio Technology</span>
+                    <span class="ladda-spinner"></span>
+                </button>
+            </div>*@
+                <a class="btn btn-sm btn-dropbox btn-block" href="@Url.Action("Index", "Home")">Inicio Technology</a>
+
+
+            }
+            <p class="text-muted text-center"><small>¿Tiene una cuenta?</small></p>
+            <a class="btn btn-sm btn-white btn-block" href="@Url.Action("Login", "Account")">Entrar</a>
+            @*<p class="m-t"> <small>Almacen Digital &copy; 2018</small> </p>*@
+        </div>
+    </div>
+</body>
+
+</html>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/plugins/validate")
+@Scripts.Render("~/plugins/ladda")
+@Scripts.Render("~/plugins/sweetAlert")
+<script src="~/Scripts/parametros.js"></script>
+<script src="~/Scripts/api/WebApi.js"></script>
+<script src="~/Scripts/register/register.js"></script>

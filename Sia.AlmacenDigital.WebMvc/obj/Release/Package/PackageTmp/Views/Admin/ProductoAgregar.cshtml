@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Agregar nuevo producto";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Productos</h2>
+        <ol class="breadcrumb">
+            <li>Administración del sistema</li>
+            <li>Producto</li>
+            <li class="active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="javascript:history.back()" class="btn btn-sm btn-rounded btn-primary" title="Regresar"><i class="fa fa-arrow-left"></i> Regresar</a>
+                    <br /><br />
+                    <form method="post" id="formRegistrarProducto" name="formRegistrarProducto">
+                            <div class="form-group">
+                                <label for="CategoriaRegistrar" class="col-form-label">Categoría:</label>
+                                <select class="form-control" id="CategoriaRegistrar" name="CategoriaRegistrar"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Codigo" class="col-form-label">Código:</label>
+                                <input type="text" class="form-control" id="Codigo" name="Codigo" placeholder="Código...">
+                            </div>
+                            <div class="form-group">
+                                <label for="CodigoBarra" class="col-form-label">Código de barra:</label>
+                                <input type="text" class="form-control" id="CodigoBarra" name="CodigoBarra" placeholder="Código de barra...">
+                            </div>
+                            <div class="form-group">
+                                <label for="Nombre" class="col-form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre...">
+                            </div>
+                            <div class="form-group">
+                                <label for="Pieza" class="col-form-label">Pieza:</label>
+                                <input type="number" class="form-control" id="Pieza" name="Pieza" placeholder="Pieza...">
+                            </div>
+                            <div class="form-group">
+                                <label for="Capacidad" class="col-form-label">Capacidad:</label>
+                                <input type="text" class="form-control" id="Capacidad" name="Capacidad" placeholder="Capacidad...">
+                            </div>
+                            <div class="form-group">
+                                <label for="Color" class="col-form-label">Color:</label>
+                                <input type="text" class="form-control" id="Color" name="Color" placeholder="Color...">
+                            </div>
+                            <div class="form-group">
+                                <label for="Material" class="col-form-label">Material:</label>
+                                <input type="text" class="form-control" id="Material" name="Material" placeholder="Material...">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="Descripcion" class="col-form-label">Descripción:</label>
+                                <textarea type="text" class="form-control" id="Descripcion" name="Descripcion" placeholder="Descripción..."></textarea>
+                            </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-w-m btn-primary ladda-button" data-style="zoom-in" id="btnRegistrar">Registrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+@section Styles {
+
+}
+
+@section Scripts {
+    <script src="~/Scripts/mvc/admin/producto/productoAgregar.js"></script>
+}

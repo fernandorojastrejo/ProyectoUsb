@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+    ViewBag.Title = "Varios";
+}
+@section Styles {
+}
+<div class="row">
+    <ul class="bxslider-varios"></ul>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="container">
+        @Html.Partial("Partial/_BuscarProducto")
+        <!-- Catalogo Tecnologia-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ibox top">
+                    <div class="ibox-title">
+                        <h5>Varios</h5>
+                    </div>
+                    <!-- Grid productos-->
+                    @Html.Partial("Partial/_GridProducto")
+                </div>
+            </div>
+        </div>
+        <!-- Fin catalogos productos-->
+        <!-- Modal detalle producto-->
+        @Html.Partial("Modal/_ModalDetalleProducto")
+
+
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/plugins/slick")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            cargaBanner("varios", 5);
+            obtenerProductosCategoria(5, 1);
+            dibujarPaginador(5);
+            var url = window.location.href;
+            if (url.includes('#'))
+            {
+                var pageNumber = window.location.hash.substr(1);
+                $('.pagination').pagination('selectPage', pageNumber);
+            }
+            clickBtnBuscar(5, 1);
+        });
+    </script>
+    <script type="text/javascript" src="~/Scripts/mvc/carrito/index.js"></script>
+}

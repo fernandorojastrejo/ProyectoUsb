@@ -1,0 +1,28 @@
+﻿<div class="modal fade" id="registrarBannerTiempoModal" tabindex="-1" role="dialog" aria-labelledby="registrarBannerTiempoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="registrarBannerTiempoModalLabel">Registrar tiempo banner</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="CategoriaRegistrarBannerTiempo" class="col-form-label">Categoría: <span class="label label-primary" id="CategoriaRegistrarBannerTiempo"></span></label>
+                    
+                </div>
+                <form id="formRegistrarBannerTiempo" class="form-inline">
+                    <input type="hidden" class="form-control" id="CategoriaIdRegistrarBannerTiempo" name="CategoriaIdRegistrarBannerTiempo">
+                    <div class="form-group">
+                        <label for="bannerTiempo" class="col-form-label">Tiempo (segundos): <span class="label label-primary"></span></label>
+                        <input type="number" class="form-control" id="bannerTiempo" name="bannerTiempo" value="0">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-w-m btn-primary ladda-button" data-style="zoom-in" id="btnRegistrarBannerTiempo">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

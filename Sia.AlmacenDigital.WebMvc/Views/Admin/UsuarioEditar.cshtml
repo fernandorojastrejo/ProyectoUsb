@@ -1,0 +1,135 @@
+﻿
+
+@{
+    ViewBag.Title = "Editar usuario";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Productos</h2>
+        <ol class="breadcrumb">
+            <li>Administración del sistema</li>
+            <li>Usuarios</li>
+            <li class="active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="javascript:history.back()" class="btn btn-sm btn-rounded btn-primary" title="Regresar"><i class="fa fa-arrow-left"></i> Regresar</a>
+                    <br /><br />
+                    <input type="hidden" value="@ViewBag.UsuarioId" id="usuarioIdEditar" name="usuarioIdEditar" disabled />
+
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-1">Datos de usuario</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-2">Roles usuario</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-3">Contraseña usuario</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <form id="formEditarUsuario" name="formEditarUsuario">
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="NombreEditar" class="col-form-label">Nombre completo:</label>
+                                                <input type="text" class="form-control" id="NombreEditar" name="NombreEditar" placeholder="Nombre completo...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ApEditar" class="col-form-label">Apellido paterno:</label>
+                                                <input type="text" class="form-control" id="ApEditar" name="ApEditar" placeholder="Apellido paterno...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="AmEditar" class="col-form-label">Apellido materno:</label>
+                                                <input type="text" class="form-control" id="AmEditar" name="AmEditar" placeholder="Apellido materno...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="CorreoEditar" class="col-form-label">Correo electrónico:</label>
+                                                <input type="text" class="form-control" id="CorreoEditar" name="CorreoEditar" placeholder="Correo electrónico...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="TipoPrecioEditar" class="col-form-label">Tipo de precio:</label>
+                                                <select class="form-control" id="TipoPrecioEditar" name="TipoPrecioEditar">
+                                                    <option value="1">Precio 1</option>
+                                                    <option value="2">Precio 2</option>
+                                                    <option value="3">Precio 3</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="text-right">
+                                                    <button type="submit" class="btn btn-w-m btn-primary ladda-button" data-style="zoom-in" id="btnActualizar">Actualizar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Asignar o quitar rol</strong>
+                                    <br />
+                                    <form role="form" class="form-inline">
+                                        <div class="checkbox m-r-xs">
+                                            <input type="checkbox" id="Administrador" name="rol" value="1">
+                                            <label for="Administrador">
+                                                Administrador
+                                            </label>
+                                        </div>
+                                        <div class="checkbox m-r-xs">
+                                            <input type="checkbox" id="UsuarioSistema" name="rol" value="2">
+                                            <label for="UsuarioSistema">
+                                                Usuario Sistema
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="tab-3" class="tab-pane">
+                                <div class="panel-body">
+                                    <form id="formEditarUsuarioPassword" name="formEditarUsuarioPassword">
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="Password" class="col-form-label">Nueva contraseña:</label>
+                                                <input type="password" class="form-control" id="Password" name="Password" placeholder="Nueva contraseña...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ConfirmPassword" class="col-form-label">Repetir nueva contraseña:</label>
+                                                <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" placeholder="Repetir nueva contraseña...">
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="text-right">
+                                                    <button type="submit" class="btn btn-w-m btn-primary ladda-button" data-style="zoom-in" id="btnActualizarPassword">Actualizar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+@section Styles {
+
+}
+
+@section Scripts {
+    <script src="~/Scripts/mvc/admin/usuario/usuarioEditar.js"></script>
+}

@@ -1,0 +1,12 @@
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\bin\Debug\Sia.ControlAlmacenDigital.Entidades.dll
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\bin\Debug\Sia.ControlAlmacenDigital.Entidades.pdb
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.dll
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.pdb
+C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\ALMACENPROYECT\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\bin\Debug\Sia.ControlAlmacenDigital.Entidades.dll
+C:\Users\admin\Desktop\ALMACENPROYECT\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\bin\Debug\Sia.ControlAlmacenDigital.Entidades.pdb
+C:\Users\admin\Desktop\ALMACENPROYECT\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\ALMACENPROYECT\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\ALMACENPROYECT\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.dll
+C:\Users\admin\Desktop\ALMACENPROYECT\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.pdb

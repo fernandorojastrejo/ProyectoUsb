@@ -1,0 +1,189 @@
+﻿
+@{
+    ViewBag.Title = "Producto Excel";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Producto Excel</h2>
+        <ol class="breadcrumb">
+            <li>Administración del sistema</li>
+            <li class="active">
+                <strong>Producto Excel</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-sm-8">
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox" id="ibox1">
+                        <div class="ibox-title">
+                            <h5>
+                                Elija archivo válido en formato Excel para productos
+                                <a class="btn-success btn btn-xs" href="#" id="DescargarBtn"><i class="fa fa-cloud-download"></i> Descargar plantilla</a>
+                            </h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="sk-spinner sk-spinner-double-bounce">
+                                <div class="sk-double-bounce1"></div>
+                                <div class="sk-double-bounce2"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-md-12 col-lg-12">
+                                    <form action="~/Admin/SaveUploadedFile" method="post" enctype="multipart/form-data" class="dropzone" id="dropzoneForm">
+                                        <div class="fallback">
+                                            <input name="file" type="file" multiple />
+                                            <input type="submit" value="Upload" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles {
+    @Styles.Render("~/plugins/select2Styles")
+    @Styles.Render("~/plugins/dropzone/dropZoneStyles")
+    @Styles.Render("~/plugins/sweetAlertStyles")
+}
+
+@section Scripts {
+
+<script>
+    Dropzone.autoDiscover = false;
+</script>
+
+    @Scripts.Render("~/plugins/codeEditor")
+    @Scripts.Render("~/plugins/dropZone")
+    @Scripts.Render("~/plugins/sweetAlert")
+    <script type="text/javascript">
+        $('#DescargarBtn').attr('href', apiUrl + "Excel/PlatillaEjemploProductos.xlsx");
+        //File Upload response from the server
+        Dropzone.options.dropzoneForm = {
+            maxFiles: 2,
+            acceptedFiles: '.xlsx, .xls',
+            dictDefaultMessage: "<strong>Arrastre archivo Excel sobre esta área <br /> para importar producto(s). </strong></br> (El archivo debe cumplir con la plantilla <br /> que puede ser descargado desde esta página) <span class='text-center'></span>",
+            init: function () {
+                this.on("maxfilesexceeded", function (data) {
+                    var res = eval('(' + data.xhr.responseText + ')');
+                });
+                this.on("complete", function (data) {
+                    console.log(JSON.stringify(data.status));
+                    $('#ibox1').children('.ibox-content').toggleClass('sk-loading');
+                    if (data.xhr == undefined) {
+                        return;
+                    }
+                    var res = JSON.parse(data.xhr.responseText);
+                    switch (res.Message){
+                        case 'ok':
+                            //mensajeExito('El proceso de validación y actualización ha terminado.\nFavor de revisar los archivos generados');
+
+                            break;
+                        case 'NoArchivo':
+                            mensajeError('El archivo seleccionado no corresponde al subsector, favor de verificar.');
+                            break;
+                        case 'ErrorArchivo':
+                            mensajeError('Error al procesar el archivo');
+                        case 'ArchivoActivo':
+                            mensajeError('Existe un proceso de actualización de información activa.\nFavor de reintentar más tarde./n');
+                            break;
+                        default:
+                            mensajeError(res.Message);
+                            break;
+                    }
+                    $('#ibox1').children('.ibox-content').removeClass('sk-loading');
+                });
+                this.on('sending', function (file, xhr, formData) {
+                    dictDefaultMessage = "<strong>Arrastre un archivo sobre esta área <br />para importar empleados. </strong></br> (El archivo debe ser cumplir con la plantilla <br /> que puede ser descargado desde esta página) <span class='text-center'><img src='../Images/upload.png' width='50px' height='40px'></span>";
+                });
+                this.on("processing", function (file) {
+                    $('#ibox1').children('.ibox-content').toggleClass('sk-loading');
+                });
+                this.on("addedfile", function (file) {
+
+                    // Create the remove button
+                    var removeButton = Dropzone.createElement("<button>Quitar archivo</button>");
+
+                    // Capture the Dropzone instance as closure.
+                    var _this = this;
+
+                    // Listen to the click event
+                    removeButton.addEventListener("click", function (e) {
+                        // Make sure the button click doesn't submit the form:
+                        e.preventDefault();
+                        e.stopPropagation();
+                        // Remove the file preview.
+                        _this.removeFile(file);
+                        // If you want to the delete the file on the server as well,
+                        // you can do the AJAX request here.
+                    });
+
+                    // Add the button to the file preview element.
+                    file.previewElement.appendChild(removeButton);
+                });
+                this.on("success", function (file, response) {
+                    console.log("Nombre archivo: " + file.name);
+                    agregarEditarProductoExcel(file.name);
+                });
+            },
+        };
+
+
+        function agregarEditarProductoExcel(fname) {
+
+            var urlExcel = "Excel\\" + fname;
+            //console.log(urlImagen);
+            var modelo = {
+                RutaExcel: urlExcel
+            }
+            var urlPeticion = apiUrl + "api/ProductoExcel/AgregarEditaExcel";
+
+            $.ajax({
+                type: 'POST',
+                url: urlPeticion,
+                data: modelo
+            }).done(function (modelo) {
+                modelo.Exito == true ? mensajeExito(modelo.MensajeExito) : mensajeError(modelo.MensajeError);
+            }).fail(function (modelo) {
+                mensajeError(modelo.MensajeError);
+                }).always(function () {
+                    $('#ibox1').children('.ibox-content').removeClass('sk-loading');
+            });
+        }
+        function mensajeError(mensaje) {
+            swal({
+                title: "Error",
+                text: mensaje,
+                type: "warning",
+                confirmButtonColor: "#DD6B55"
+            });
+        }
+
+        function mensajeExito(mensaje) {
+            swal({
+                title: "Éxito",
+                text: mensaje,
+                type: "success",
+                confirmButtonColor: "#18A689"
+            });
+        }
+
+        function mensajee(mensaje) {
+            swal({
+                title: "Usuario",
+                text: mensaje,
+                type: "warning",
+                confirmButtonColor: "#ce9b02"
+            });
+        }
+    </script>
+}

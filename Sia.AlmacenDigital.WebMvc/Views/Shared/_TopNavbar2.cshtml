@@ -1,0 +1,113 @@
+﻿@using Microsoft.AspNet.Identity
+<div class="row border-bottom white-bg">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <i class="fa fa-reorder"></i>
+            </button>
+            @*<a href="#" class="navbar-brand">Technology</a>*@
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                @*<li>
+                    <a aria-expanded="false" role="button" href="@Url.Action("Index", "Home")"> Inicio</a>
+                </li>*@
+                <li class="@Html.IsSelected(action: "Index")">
+                    <a aria-expanded="false" role="button" href="@Url.Action("Index","Home")" title="Inicio/Nuevos productos"><i class="fa fa-home"></i> Nuevos productos</a>
+                </li>
+                <li class="@Html.IsSelected(action: "Promocion")">
+                    <a aria-expanded="false" role="button" href="@Url.Action("Promocion","Home")" title="Promociones"> Promociones</a>
+                </li>
+                <li class="@Html.IsSelected(action: "Memoria")">
+                    <a aria-expanded="false" role="button" href="@Url.Action("Memoria","Home")" title="Memorias USB"> Memorias USB</a>
+                </li>
+                <li class="@Html.IsSelected(action: "PowerBank")">
+                    <a aria-expanded="false" role="button" href="@Url.Action("PowerBank","Home")" title="Power Bank"> Power Bank</a>
+                </li>
+                <li class="@Html.IsSelected(action: "Audio")">
+                    <a aria-expanded="false" role="button" href="@Url.Action("Audio","Home")" title="Audio"> Audio</a>
+                </li>
+                <li class="@Html.IsSelected(action: "Tecnologia")">
+                    <a aria-expanded="false" role="button" href="@Url.Action("Tecnologia","Home")" title="Tecnología"> Tecnología</a>
+                </li>
+                <li class="@Html.IsSelected(action: "Varios")">
+                    <a aria-expanded="false" role="button" href="@Url.Action("Varios","Home")" title="Varios"> Varios</a>
+                </li>
+                @*<li class="@Html.IsSelected(action: "Catalogo")">
+                    <a aria-expanded="false" role="button" href="@Url.Action("Catalogo","Carrito")" title="Catálogo"> Catálogo</a>
+                </li>*@
+                <li><a class="page-scroll" href="#contacto" title="Contacto">Contacto</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @if (Request.IsAuthenticated)
+                {
+                    @*<li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="true" title="Carrito de compra">
+                            <i class="fa fa-shopping-cart"></i> <span class="label label-warning">3</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-dot-circle-o fa-fw"></i> Memoria USB <span class="text-muted small">$350.00</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-dot-circle-o fa-fw"></i> Disco duro <span class="text-muted small">$350.00</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-dot-circle-o fa-fw"></i> Pantalla LG <span class="text-muted small">$350.00</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="#">
+                                        <strong>Ver productos</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>*@
+                    <li class="dropdown">
+                        <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown" title="Opciones usuario"> @User.Identity.GetUserName() <span class="caret"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                            @*<li><a href="#"><i class="fa fa-user"></i> Perfil</a></li>*@
+
+
+                            @if (User.IsInRole("Administrador"))
+                            {
+                                <li><a href="@Url.Action("Producto", "Admin")"><i class="fa fa-cog"></i><span class="label label-danger pull-right">Admin</span> Sistema</a></li>
+                                <li class="divider"></li>
+                            }
+
+
+                            @*<li><a href="#"><i class="fa fa-history"></i> Compras</a></li>
+        <li><a href="#"><i class="fa fa-credit-card"></i> Tarjetas</a></li>*@
+                            @Html.AntiForgeryToken()
+                            <li><a href="#" id="aLogout" class="btn btn-link"><i class="fa fa-sign-out"></i> Salir</a></li>
+                        </ul>
+                    </li>
+                }
+                else
+                {
+
+                    <li class="gray-bg bg-muted2" ><a href="@Url.Action("Register","Account")" id="registerLink"><i class="fa fa-user-circle" title="Registrarte"></i> Registrate</a></li>
+                    <li><a  href="@Url.Action("Login","Account")" id="loginLink" title="Iniciar sesión"><i class="fa fa-sign-in"></i> ENTRAR</a></li>
+                }
+
+            </ul>
+        </div>
+    </nav>
+</div>
