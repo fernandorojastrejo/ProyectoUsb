@@ -8,3 +8,12 @@ C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigi
 C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\refactor.xml
 C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\postdeploy.sql
 C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\predeploy.sql
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.BaseDatos\bin\Debug\Sia.ControlAlmacenDigital.BaseDatos.dacpac
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.BaseDatos\bin\Debug\Sia.ControlAlmacenDigital.BaseDatos.dll
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.BaseDatos\bin\Debug\Sia.ControlAlmacenDigital.BaseDatos.pdb
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\Model.xml
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\refactor.xml
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\postdeploy.sql
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\predeploy.sql
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\Sia.ControlAlmacenDigital.BaseDatos.dll
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\Sia.ControlAlmacenDigital.BaseDatos.pdb
