@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="Sia.ControlAlmacenDigital.BaseDatos.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\MAURICIO\SOURCE\WORKSPACES\CONTROLALMACENDIGITAL\SIA.CONTROLALMACENDIGITAL\SIA.CONTROLALMACENDIGITAL.BASEDATOS\OBJ\DEBUG\SIA.CONTROLALMACENDIGITAL.BASEDATOS.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\EQUIPO\DOCUMENTS\GITHUB\PROYECTOUSB\SIA.CONTROLALMACENDIGITAL.BASEDATOS\OBJ\DEBUG\SIA.CONTROLALMACENDIGITAL.BASEDATOS.DLL" />
 			<Metadata Name="AssemblyName" Value="Sia.ControlAlmacenDigital.BaseDatos" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Mauricio\source\Workspaces\ControlAlmacenDigital\Sia.ControlAlmacenDigital\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\Sia.ControlAlmacenDigital.BaseDatos.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.BaseDatos\obj\Debug\Sia.ControlAlmacenDigital.BaseDatos.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
