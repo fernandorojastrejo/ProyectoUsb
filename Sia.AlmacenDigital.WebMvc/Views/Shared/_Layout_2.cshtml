@@ -15,6 +15,8 @@
     @*@Styles.Render("~/font-awesome/css")*@
     <link href="@Url.Content("~/fonts/font-awesome/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
     @Styles.Render("~/Content/css")
+    @* LEJGG 09-12-2018*@
+    @* LEJGG 09-12-2018*@
     <link href="~/Content/plugins/bxsilder/jquery.bxslider.min.css" rel="stylesheet" />
     <link href="~/Content/plugins/xZoom/xzoom.css" rel="stylesheet" />
 
@@ -194,24 +196,24 @@
     }
 
     <!-- Wrapper-->
-    <!-- PageClass give you ability to specify custom style for specific view based on action -->   
-        <div id="wrapper" class="@Html.PageClass()">
-            <!-- Page wraper -->
-            <div id="page-wrapper" class="gray-bg @ViewBag.SpecialClass">
-                <!-- Top Navbar -->
-                @Html.Partial("_TopNavbar2")
+    <!-- PageClass give you ability to specify custom style for specific view based on action -->
+    <div id="wrapper" class="@Html.PageClass()">
+        <!-- Page wraper -->
+        <div id="page-wrapper" class="gray-bg @ViewBag.SpecialClass">
+            <!-- Top Navbar -->
+            @Html.Partial("_TopNavbar2")
 
-                <!-- Main view  -->
-                @RenderBody()
-                <!-- Return to Top -->
-                <a href="javascript:" id="return-to-top" title="Volver arriba"><i class="fa fa-arrow-up"></i></a>
-                <!-- Footer -->
-                @Html.Partial("_Footer2")
-                @Html.Partial("Modal/_EnviarCorreo")
-            </div>
-            <!-- End page wrapper-->
-
+            <!-- Main view  -->
+            @RenderBody()
+            <!-- Return to Top -->
+            <a href="javascript:" id="return-to-top" title="Volver arriba"><i class="fa fa-arrow-up"></i></a>
+            <!-- Footer -->
+            @Html.Partial("_Footer2")
+            @Html.Partial("Modal/_EnviarCorreo")
         </div>
+        <!-- End page wrapper-->
+
+    </div>
     <!-- End wrapper-->
     <!-- Section for main scripts render -->
     @Scripts.Render("~/bundles/jquery")
