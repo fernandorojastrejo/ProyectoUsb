@@ -8,10 +8,15 @@
             @*<a href="#" class="navbar-brand">Technology</a>*@
         </div>
         <div class="navbar-collapse collapse" id="navbar">
+            @* LEJGG 09-12-2018-----I *@
+            <a href="#" class="brand-logo left">
+                <img src="~/Images/logoprincipal2.png" style="padding-top: 5px; padding-left:6px; width:101px;height:60px;" alt="Technology" class="img-responsive pull-left" />
+            </a>
+            @* LEJGG 09-12-2018-----T *@
             <ul class="nav navbar-nav">
                 @*<li>
-                    <a aria-expanded="false" role="button" href="@Url.Action("Index", "Home")"> Inicio</a>
-                </li>*@
+                <a aria-expanded="false" role="button" href="@Url.Action("Index", "Home")"> Inicio</a>
+            </li>*@
                 <li class="@Html.IsSelected(action: "Index")">
                     <a aria-expanded="false" role="button" href="@Url.Action("Index","Home")" title="Inicio/Nuevos productos"><i class="fa fa-home"></i> Nuevos productos</a>
                 </li>
@@ -34,52 +39,52 @@
                     <a aria-expanded="false" role="button" href="@Url.Action("Varios","Home")" title="Varios"> Varios</a>
                 </li>
                 @*<li class="@Html.IsSelected(action: "Catalogo")">
-                    <a aria-expanded="false" role="button" href="@Url.Action("Catalogo","Carrito")" title="Catálogo"> Catálogo</a>
-                </li>*@
+                <a aria-expanded="false" role="button" href="@Url.Action("Catalogo","Carrito")" title="Catálogo"> Catálogo</a>
+            </li>*@
                 <li><a class="page-scroll" href="#contacto" title="Contacto">Contacto</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Request.IsAuthenticated)
                 {
                     @*<li class="dropdown">
-                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="true" title="Carrito de compra">
-                            <i class="fa fa-shopping-cart"></i> <span class="label label-warning">3</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-alerts">
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-dot-circle-o fa-fw"></i> Memoria USB <span class="text-muted small">$350.00</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-dot-circle-o fa-fw"></i> Disco duro <span class="text-muted small">$350.00</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-dot-circle-o fa-fw"></i> Pantalla LG <span class="text-muted small">$350.00</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a href="#">
-                                        <strong>Ver productos</strong>
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="true" title="Carrito de compra">
+                        <i class="fa fa-shopping-cart"></i> <span class="label label-warning">3</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-dot-circle-o fa-fw"></i> Memoria USB <span class="text-muted small">$350.00</span>
                                 </div>
-                            </li>
-                        </ul>
-                    </li>*@
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-dot-circle-o fa-fw"></i> Disco duro <span class="text-muted small">$350.00</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-dot-circle-o fa-fw"></i> Pantalla LG <span class="text-muted small">$350.00</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="#">
+                                    <strong>Ver productos</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>*@
                     <li class="dropdown">
                         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown" title="Opciones usuario"> @User.Identity.GetUserName() <span class="caret"></span></a>
                         <ul role="menu" class="dropdown-menu">
@@ -94,7 +99,7 @@
 
 
                             @*<li><a href="#"><i class="fa fa-history"></i> Compras</a></li>
-        <li><a href="#"><i class="fa fa-credit-card"></i> Tarjetas</a></li>*@
+                        <li><a href="#"><i class="fa fa-credit-card"></i> Tarjetas</a></li>*@
                             @Html.AntiForgeryToken()
                             <li><a href="#" id="aLogout" class="btn btn-link"><i class="fa fa-sign-out"></i> Salir</a></li>
                         </ul>
@@ -103,8 +108,8 @@
                 else
                 {
 
-                    <li class="gray-bg bg-muted2" ><a href="@Url.Action("Register","Account")" id="registerLink"><i class="fa fa-user-circle" title="Registrarte"></i> Registrate</a></li>
-                    <li><a  href="@Url.Action("Login","Account")" id="loginLink" title="Iniciar sesión"><i class="fa fa-sign-in"></i> ENTRAR</a></li>
+                    <li class="gray-bg bg-muted2"><a href="@Url.Action("Register","Account")" id="registerLink"><i class="fa fa-user-circle" title="Registrarte"></i> Registrate</a></li>
+                    <li><a href="@Url.Action("Login","Account")" id="loginLink" title="Iniciar sesión"><i class="fa fa-sign-in"></i> ENTRAR</a></li>
                 }
 
             </ul>

@@ -15,3 +15,4 @@ C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.Entidades
 C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.dll
 C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.pdb
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.ControlAlmacenDigital.Entidades\obj\Debug\Sia.ControlAlmacenDigital.Entidades.csprojAssemblyReference.cache

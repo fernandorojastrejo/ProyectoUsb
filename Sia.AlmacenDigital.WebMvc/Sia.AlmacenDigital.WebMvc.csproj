@@ -230,6 +230,9 @@
     <Content Include="Content\Default\bootstrap.css" />
     <Content Include="Content\Default\bootstrap.min.css" />
     <Content Include="Content\email.css" />
+    <Content Include="Content\g-materialize.css" />
+    <Content Include="Content\material.min.css" />
+    <Content Include="Content\materialize.css" />
     <Content Include="Content\plugins\bxsilder\jquery.bxslider.css" />
     <Content Include="Content\plugins\bxsilder\jquery.bxslider.min.css" />
     <Content Include="Content\plugins\dataTables\datatables.min.css" />
@@ -1301,6 +1304,8 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\login\login.js" />
     <Content Include="Scripts\logout\logout.js" />
+    <Content Include="Scripts\materialize.js" />
+    <Content Include="Scripts\materialize.min.js" />
     <Content Include="Scripts\mvc\admin\banner\banner.js" />
     <Content Include="Scripts\mvc\admin\producto\producto.js" />
     <Content Include="Scripts\mvc\admin\producto\productoAgregar.js" />

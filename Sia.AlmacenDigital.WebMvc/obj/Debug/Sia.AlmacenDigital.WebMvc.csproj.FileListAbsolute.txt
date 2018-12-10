@@ -306,3 +306,4 @@ C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.AlmacenDigital.WebMvc\obj\Debug
 C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.AlmacenDigital.WebMvc\obj\Debug\Sia.AlmacenDigital.WebMvc.csproj.CopyComplete
 C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.AlmacenDigital.WebMvc\obj\Debug\Sia.AlmacenDigital.WebMvc.dll
 C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.AlmacenDigital.WebMvc\obj\Debug\Sia.AlmacenDigital.WebMvc.pdb
+C:\Users\EQUIPO\Documents\GitHub\ProyectoUsb\Sia.AlmacenDigital.WebMvc\obj\Debug\Sia.AlmacenDigital.WebMvc.csprojAssemblyReference.cache
